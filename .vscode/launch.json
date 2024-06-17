@@ -1,0 +1,51 @@
+{
+    // Используйте IntelliSense, чтобы узнать о возможных атрибутах.
+    // Наведите указатель мыши, чтобы просмотреть описания существующих атрибутов.
+    // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'hoi_map_converter'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=hoi_map_converter",
+                    "--package=hoi_map_converter"
+                ],
+                "filter": {
+                    "name": "hoi_map_converter",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "D:\\Games\\steamapps\\common\\Hearts of Iron IV\\map",
+                "C:\\Users\\Admin\\Documents\\Paradox Interactive\\Hearts of Iron IV\\save games\\GER_1936_01_01_12.hoi4"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'hoi_map_converter'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=hoi_map_converter",
+                    "--package=hoi_map_converter",
+                ],
+                "filter": {
+                    "name": "hoi_map_converter",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "D:\\Games\\steamapps\\common\\Hearts of Iron IV\\map",
+                "C:\\Users\\Admin\\Documents\\Paradox Interactive\\Hearts of Iron IV\\save games\\GER_1936_01_01_12.hoi4"
+            ],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
